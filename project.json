@@ -1,0 +1,116 @@
+{
+"contentrating" : "Everyone",
+"description" : "Early version for programming languages struct / class styled clock.",
+"file" : "index.html",
+"general" : 
+{
+    "properties" : 
+    {
+        "schemecolor" : 
+        {
+            "order" : 0,
+            "text" : "ui_browse_properties_scheme_color",
+            "type" : "color",
+            "value" : "0 0 0"
+        },
+        "selectClockStyle" : 
+        {
+            "index" : 0,
+            "options" : 
+            [
+                {
+                    "label" : "Select From Below",
+                    "value" : 0
+                },
+                {
+                    "label" : "Python",
+                    "value" : 1
+                },
+                {
+                    "label" : "C",
+                    "value" : 2
+                },
+                {
+                    "label" : "C++",
+                    "value" : 3
+                },
+                {
+                    "label" : "C#",
+                    "value" : 4
+                },
+                {
+                    "label" : "Java",
+                    "value" : 5
+                },
+                {
+                    "label" : "JS",
+                    "value" : 6
+                },
+                {
+                    "label" : "rust",
+                    "value" : 7
+                },
+                {
+                    "label" : "ruby",
+                    "value" : 8
+                },
+                {
+                    "label" : "SQL",
+                    "value" : 9
+                },
+                {
+                    "label" : "Fortran",
+                    "value" : 10
+                },
+                {
+                    "label" : "kotlin",
+                    "value" : 11
+                },
+                {
+                    "label" : "clojure",
+                    "value" : 12
+                },
+                {
+                    "label" : "Perl",
+                    "value" : 13
+                },
+                {
+                    "label" : "Go",
+                    "value" : 14
+                },
+                {
+                    "label" : "swift",
+                    "value" : 15
+                },
+                {
+                    "label" : "R",
+                    "value" : 16
+                },
+                {
+                    "label" : "php",
+                    "value" : 17
+                },
+                {
+                    "label" : "ada",
+                    "value" : 18
+                },
+                {
+                    "label" : "Haskell",
+                    "value" : 19
+                }
+            ],
+            "order" : 100,
+            "text" : "Code Language",
+            "type" : "combo",
+            "value" : 1
+        }
+    }
+},
+"preview" : "preview.gif",
+"ratingsex" : "none",
+"ratingviolence" : "none",
+"tags" : [ "Technology" ],
+"title" : "programming languages clocks",
+"type" : "Web",
+"version" : 0
+}

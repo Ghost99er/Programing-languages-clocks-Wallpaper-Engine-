@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Styled Clock</title>
+    <style>
+        body, html {
+            height: 100%;
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            overflow: hidden;
+            background-color: #0f0f0f;
+            font-family: "Courier New", Courier, monospace;
+        }
+        h1{
+            width: 90%;
+            word-spacing: 1%;
+        }
+
+        .container {
+            position:relative;
+            display:flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items:center;
+            height: 100%;
+            width: 100vw;
+            font-size: 1vw;
+            white-space: nowrap;
+            color: rgb(221, 238, 255);
+            text-align: left;
+        }
+        .container > * {
+            margin: 0 2.5%;
+        }
+
+        /*Code Language*/
+        .Python {
+            display: none;
+        }
+        .C {
+            display: none;
+        }
+        .CPP {
+            display: none;
+        }
+        .CS{
+            display: none;
+        }
+        .Java1,.Java2{
+            display: none;
+        }
+        .JS{
+            display: block;
+        }
+        .Rust{
+            display: block;
+        }
+        .Ruby{
+            display: block;
+        }
+        .SQL{
+            display: block;
+        }
+        .fortran{
+            display: block;
+        }
+        .kotlin{
+            display: block;
+        }
+        .clojure{
+            display: block;
+        }
+        .perl{
+            display: block;
+        }
+        .Go{
+            display: block;
+        }
+        .swift{
+            display: block;
+        }
+        .R{
+            display: block;
+        }
+        .php{
+            display: block;
+        }
+        .ada{
+            display: block;
+        }
+        .Haskell{
+            display: block;
+        }
+        
+    
+        /*Element Color*/
+        .spanBlue{
+            color:rgb(90, 134, 187);
+        }
+        .spanGreen{
+            color:rgb(90, 187, 121);
+        }
+        .spanOrange{
+            color:rgb(235, 127, 13);
+        }
+        .spanRed{
+            color:rgb(240, 19, 4);
+        }
+        .spanBlue2{
+            color:rgb(4, 28, 240);
+        }
+        .spanPink{
+            color:rgb(240, 4, 169);
+        }
+        .spanPurple{
+            color:rgb(160, 32, 240);
+        }
+        .spanBrown{
+            color:rgb(139, 69, 19);
+        }
+        .spanYellow{
+            color:rgb(245, 221, 8);
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="id-container">
+        <div class="Python" id="id-py">
+            <h1><span class="spanBlue">from</span> datetime <span class="spanBlue">import</span> datetime</h1>
+            <h1>&nbsp;</h1>
+            <h1><span class="spanBlue">class</span> DateTime:</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;<span class="spanBlue">def</span> __init__(<span class="spanGreen">self</span>):</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="spanGreen">self</span>.hh = <span id="pyhh" class="spanOrange">00</span></h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="spanGreen">self</span>.mm = <span id="pymm" class="spanOrange">00</span></h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="spanGreen">self</span>.ss = <span id="pyss" class="spanOrange">00</span></h1>
+            <h1>&nbsp;</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="spanGreen">self</span>.DD = <span id="pyDD" class="spanOrange">00</span></h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="spanGreen">self</span>.MM = <span id="pyMM" class="spanOrange">00</span></h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="spanGreen">self</span>.YY = <span id="pyYY" class="spanOrange">00</span></h1>
+            <h1>&nbsp;</h1>
+            <h1>Now = DateTime()</h1>
+        </div>
+        <div class="C" id="id-c">
+            <h1><span class="spanBlue">#include</span> <span class="spanOrange">&lt;stdio.h&gt;</span></h1>
+            <h1><span class="spanBlue">struct</span> DateTime {</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;<span class="spanBlue">unsigned int</span> hh; <span class="spanBlue">unsigned int</span> mm;</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;<span class="spanBlue">unsigned int</span> ss; <span class="spanBlue">unsigned int</span> DD;</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;<span class="spanBlue">char</span> MM[<span class="spanBlue">10</span>]; <span class="spanBlue">unsigned int</span> YY;</h1>
+            <h1>}</h1>
+            <h1>&nbsp;</h1>
+            <h1><span class="spanBlue">int</span> main() {</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;<span class="spanBlue">struct</span> DateTime Now = {</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.hh = <span id="chh" class="spanBlue">00</span>, .mm = <span id="cmm" class="spanBlue">00</span>, .ss = <span id="css" class="spanBlue">00</span>,</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.DD = <span id="cDD" class="spanBlue">00</span>, .MM = <span class="spanGreen">"<span id="cMM">00</span>"</span>, .YY = <span id="cYY" class="spanBlue">00</span></h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;}</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;<span class="spanBlue">return</span> 0;</h1>
+            <h1>}</h1>
+        </div>
+        <div class="CPP" id="id-cpp">
+            <h1><span class="spanBlue">#include</span> <span class="spanOrange">&lt;iostream&gt;</span></h1>
+            <h1><span class="spanBlue">#include</span> <span class="spanOrange">&lt;string&gt;</span></h1>
+            <h1><span class="spanBlue">class</span> DateTime {</h1>
+            <h1><span class="spanBlue">public</span>:</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;<span class="spanBlue">int</span> hh; <span class="spanBlue">int</span> mm; <span class="spanBlue">int</span> ss;</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;<span class="spanBlue">int</span> DD; std::string MM; <span class="spanBlue">int</span> YY;</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;DateTime(<span class="spanBlue">int</span> h, <span class="spanBlue">int</span> m, <span class="spanBlue">int</span> s,</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="spanBlue">int</span> D, <span class="spanBlue">const</span> std::string& M, <span class="spanBlue">int</span> Y)</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: hh(h), mm(m), ss(s), DD(D), MM(M)</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;, YY(Y){};</h1>
+            <h1>}</h1>
+            <h1><span class="spanBlue">int</span> main() {</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;DateTime Now(<span id="cpphh" class="spanBlue">00</span>,<span id="cppmm" class="spanBlue">00</span>,<span id="cppss" class="spanBlue">00</span>,</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="cppDD" class="spanBlue">00</span>,<span class="spanGreen">"<span id="cppMM">00</span>"</span>,<span id="cppYY" class="spanBlue">00</span>);</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;<span class="spanBlue">return</span> 0;</h1>
+            <h1>}</h1>
+        </div>
+        <div class="CS" id="id-cs">
+            <h1><span class="spanBlue">using</span> <span class="spanGreen">System</span>;</h1>
+            <h1><span class="spanBlue">public</span> <span class="spanBlue">class</span> <span class="spanGreen">DateTime</span></h1>
+            <h1>{</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;<span class="spanBlue">public</span> <span class="spanBlue">int</span> hh {<span class="spanBlue">get</span>; <span class="spanBlue">set</span>;} = <span id="cshh">00</span>;</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;<span class="spanBlue">public</span> <span class="spanBlue">int</span> mm {<span class="spanBlue">get</span>; <span class="spanBlue">set</span>;} = <span id="csmm">00</span>;</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;<span class="spanBlue">public</span> <span class="spanBlue">int</span> ss {<span class="spanBlue">get</span>; <span class="spanBlue">set</span>;} = <span id="csss">00</span>;</h1>
+            <h1>&nbsp;</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;<span class="spanBlue">public</span> <span class="spanBlue">int</span> DD {<span class="spanBlue">get</span>; <span class="spanBlue">set</span>;} = <span id="csDD">00</span>;</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;<span class="spanBlue">public</span> <span class="spanBlue">string</span> MM {<span class="spanBlue">get</span>; <span class="spanBlue">set</span>;} = <span class="spanOrange">"<span id="csMM">00</span>"</span>;</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;<span class="spanBlue">public</span> <span class="spanBlue">int</span> YY {<span class="spanBlue">get</span>; <span class="spanBlue">set</span>;} = <span id="csYY">00</span>;</h1>
+            <h1>}</h1>
+            <h1>&nbsp;</h1>
+            <h1><span class="spanBlue">class</span> <span class="spanGreen">App</span></h1>
+            <h1>{</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;<span class="spanBlue">static void</span> <span class="spanGreen">Main</span>(<span class="spanBlue">string</span>[] args)</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;{</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DateTime Now = <span class="spanBlue">new</span> DateTime();</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;}</h1>
+            <h1>}</h1>
+        </div>
+        <div class="Java1" id="id-java1">
+            <h1><span class="spanBlue">public</span> <span class="spanBlue">class</span> DateTime</h1>
+            <h1>{</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;<span class="spanBlue">private int</span> hh = <span class="spanBlue" id="javahh">00</span>;</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;<span class="spanBlue">private int</span> mm = <span class="spanBlue" id="javamm">00</span>;</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;<span class="spanBlue">private int</span> ss = <span class="spanBlue" id="javass">00</span>;</h1>
+            <h1>&nbsp;</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;<span class="spanBlue">private int</span> DD = <span class="spanBlue" id="javaDD">00</span>;</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;<span class="spanBlue">private</span> String MM = <span class="spanGreen">"<span id="javaMM">00</span>"</span>;</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;<span class="spanBlue">private int</span> YY = <span class="spanBlue" id="javaYY">00</span>;</h1>
+            <h1>&nbsp;</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;<span class="spanBlue">public</span> DateTime(){}</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;<span class="spanBlue">public</span> DateTime(<span class="spanBlue">int</span> hh,<span class="spanBlue">int</span> mm,</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="spanBlue">int</span> ss, <span class="spanBlue">int</span> DD,</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String MM, <span class="spanBlue">int</span> YY)</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;{</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="spanBlue">this</span>.hh = hh;<span class="spanBlue">this</span>.mm = mm;</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="spanBlue">this</span>.ss = ss;<span class="spanBlue">this</span>.DD = DD;</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="spanBlue">this</span>.MM = MM;<span class="spanBlue">this</span>.YY = YY;</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;}</h1>
+            <h1>}</h1>
+        </div>
+        <div class="Java2" id="id-java2">
+            <h1><span class="spanBlue">public</span> <span class="spanBlue">class</span> Main</h1>
+            <h1>{</h1>
+            <h1><span class="spanBlue">public static void</span> main(String[] args)</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;{</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;DateTime Now = <span class="spanBlue">new</span> DateTime();</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;}</h1>
+            <h1>}</h1>
+            <!-- <h1>&nbsp;</h1>
+            <h1>&nbsp;</h1>
+            <h1>&nbsp;</h1>
+            <h1>&nbsp;</h1>
+            <h1>&nbsp;</h1>
+            <h1>&nbsp;</h1>
+            <h1>&nbsp;</h1>
+            <h1>&nbsp;</h1>
+            <h1>&nbsp;</h1>
+            <h1>&nbsp;</h1>
+            <h1>&nbsp;</h1>
+            <h1>&nbsp;</h1> -->
+        </div>
+        <div class="JS" id="id-js">
+            <h1><span class="spanBlue">class</span> DateTime</h1>
+            <h1>{</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;constructor()</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;{</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="spanOrange">this</span>.hh = <span class="spanBlue" id="jshh">00</span>;</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="spanOrange">this</span>.mm = <span class="spanBlue" id="jsmm">00</span>;</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="spanOrange">this</span>.ss = <span class="spanBlue" id="jsss">00</span>;</h1>
+            <h1>&nbsp;</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="spanOrange">this</span>.DD = <span class="spanBlue" id="jsDD">00</span>;</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="spanOrange">this</span>.MM = <span class="spanGreen">"<span id="jsMM">00</span>"</span>;</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="spanOrange">this</span>.YY = <span class="spanBlue" id="jsYY">00</span>;</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;}</h1>
+            <h1>}</h1>
+            <h1>&nbsp;</h1>
+            <h1><span class="spanBlue">let</span> Now = <span class="spanBlue">new</span> DateTime();</h1>
+            <h1></h1>
+        </div>
+        <div class="Rust" id="id-rust">
+            <h1><span class="spanBlue">use</span> chrono::{Local, DateTime};</h1>
+            <h1>&nbsp;</h1>
+            <h1>&nbsp;</h1>
+            <h1><span class="spanBlue">fn</span><span class="spanRed"> main</span>() {
+            <h1><span class="spanBlue">let</span><span class="spanPink"> current_time</span>: DateTime-Local- = Local::<span class="spanBlue">Now</span>();</h1>
+            <h1><span class="spanOrange">println!</span>(<span class="spanGreen">"Current hour is: </span><span id="rusthh" class="spanRed">00</span>);</h1>
+            <h1><span class="spanOrange">println!</span>(<span class="spanGreen">"Current minute is: </span><span id="rustmm" class="spanRed">00</span>);</h1>
+            <h1><span class="spanOrange">println!</span>(<span class="spanGreen">"Current second is: </span><span id="rustss" class="spanRed">00</span>);</h1>
+            <h1><span class="spanOrange">println!</span>(<span class="spanGreen">"Current Year is: </span><span id="rustYY" class="spanRed">00</span>);</h1>
+            <h1><span class="spanOrange">println!</span>(<span class="spanGreen">"Current Month is: </span><span id="rustMM" class="spanRed">00</span>);</h1>
+            <h1><span class="spanOrange">println!</span>(<span class="spanGreen">"Current Day is: </span><span id="rustDD" class="spanRed">00</span>);</h1>
+            <h1>}</h1>
+            <h1>&nbsp;</h1>
+            </div>
+        
+        <div class="Ruby" id="id-ruby">
+            <h1><span class="spanBlue">require</span><span class="spanGreen">'date"</span></h1>
+            <h1>Current_time = <span class="spanRed">DateTime.now</span></h1>
+            <h1>cdt = current_time.strftime</h1>
+            <h1><span class="spanGreen">%h</span> = <span id="rubyhh" class="spanBlue">00</span></h1>
+            <h1><span class="spanGreen">%m</span> = <span id="rubymm" class="spanBlue">00</span></h1>
+            <h1><span class="spanGreen">%s</span> = <span id="rubyss" class="spanBlue">00</span></h1>
+            <h1><span class="spanGreen">%D</span> = <span id="rubyDD" class="spanBlue">00</span></h1>
+            <h1><span class="spanGreen">%M</span> = <span id="rubyMM" class="spanBlue">00</span></h1>
+            <h1><span class="spanGreen">%Y</span> = <span id="rubyYY" class="spanBlue">00</span></h1>
+            <h1>&nbsp;</h1>
+        </div>
+        
+        <div class="SQL" id="id-sql">
+            <h1><span class="spanBlue2">SLEECT</span><span class="spanPink">GETDATE()</span></h1>
+            <h1>&nbsp;</h1>
+            <h1><span class="spanBlue2">SELECT</span><span class="spanGreen"> date_part </span>(<span class="spanPink">'hour'</span>,<span id="sqlhh" class="spanBlue">00</span>)</h1>
+            <h1><span class="spanBlue2">SELECT</span><span class="spanGreen"> date_part </span>(<span class="spanPink">'minutes'</span>,<span id="sqlmm" class="spanBlue">00</span>)</h1>
+            <h1><span class="spanBlue2">SELECT</span><span class="spanGreen"> date_part </span>(<span class="spanPink">'seconds'</span>,<span id="sqlss" class="spanBlue">00</span>)</h1>
+            <h1><span class="spanBlue2">SELECT</span><span class="spanGreen"> date_part </span>(<span class="spanPink">'Year'</span>,<span id="sqlYY" class="spanBlue">00</span>)</h1>
+            <h1><span class="spanBlue2">SELECT</span><span class="spanGreen"> date_part </span>(<span class="spanPink">'Month'</span>,<span id="sqlMM" class="spanBlue">00</span>)</h1>
+            <h1><span class="spanBlue2">SELECT</span><span class="spanGreen"> date_part </span>(<span class="spanPink">'Day'</span>,<span id="sqlDD" class="spanBlue">00</span>)</h1>
+            <h1>&nbsp;</h1>
+        </div>
+
+        <div class="fortran" id="id-fortran">
+            <h1>program get_date_time</h1>
+            <h1>&nbsp; implicit none</h1>
+            <h1>&nbsp; character(len=8) :: date</h1>
+            <h1>&nbsp; character(len=10) :: time</h1>
+            <h1>&nbsp; integer :: values(8)</h1>
+            <h1>&nbsp;</h1>
+            <h1>&nbsp; ! Call the intrinsic subroutine to get the date and time</h1>
+            <h1>&nbsp; call date_and_time(date, time, values)</h1>
+            <h1>&nbsp;</h1>
+            <h1>&nbsp; ! Print the date and time</h1>
+            <h1>&nbsp; print *, 'Date (<span id="fortranYY" class="spanBlue"> 00 </span><span id="fortranMM" class="spanBlue"> 00 </span><span id="fortranDD" class="spanBlue"> 00 </span>): ', date</h1>
+            <h1>&nbsp; print *, 'Time (<span id="fortranhh" class="spanBlue"> 00 </span><span id="fortranmm" class="spanBlue"> 00 </span><span id="fortranss" class="spanBlue"> 00 </span>): ', time</h1>
+            <h1>&nbsp; print *, 'Values: ', values</h1>
+            <h1>end program get_date_time</h1>
+            <h1>&nbsp;</h1>
+         </div>
+
+         <div class="kotlin" id="id-kotlin">
+            <h1><span class="spanGreen">val </span>current = LocalDate.now()</h1>
+            <h1><span class="spanGreen">val </span>current = LocalDateTime.now()</h1>
+            <h1>&nbsp;</h1>
+            <h1><span class="spanGreen">val </span>formatter = DateTimeFormatter.ofPattern(<span class="spanGreen">"yyyy-MM-dd HH:mm:ss"</span>)</h1>
+            <h1>&nbsp;</h1>
+            <h1><span class="spanGreen">val </span>current = LocalDateTime.now().format(formatter)</h1>
+            <h1>&nbsp;</h1>
+            <h1><span class="spanGreen">Current </span>"<span id="kotlinYY" class="spanBlue">00</span>-<span id="kotlinMM" class="spanBlue">00</span>-<span id="kotlinDD" class="spanBlue">00</span> <span id="kotlinhh" class="spanBlue">00</span>:<span id="kotlinmm" class="spanBlue">00</span>:<span id="kotlinss" class="spanBlue">00</span>"</h1>
+        </div>
+
+        <div class="clojure" id="id-clojure">
+            <h1><span class="spanBrown">(</span>ns example<span class="spanBrown">)</span></h1>
+            <h1><span class="spanBrown">(</span>defn <span class="spanPurple">Example </span><span class="spanBrown">[] )</span></h1>
+            <h1><span class="spanGreen">(</span><span class="spanBlue2">def </span>date <span class="spanBrown">(</span>.format <span class="spanBrown">(</span>java.text.<span class="spanPurple">SimpleDateFormat</span>. <span class="spanGreen">"MM/dd/yyyy"</span><span class="spanBrown">)</span> <span class="spanBrown">(</span><span class="spanBlue2">new </span>java.util.date<span class="spanBrown">)))</span></h1>
+            <h1><span class="spanBrown">(</span>println Date<span class="spanBrown">)</span></h1>
+            <h1><span class="spanBrown">(</span><span id="clojureMM" class="spanGreen">00</span>/<span id="clojureDD" class="spanGreen">00</span>/<span id="clojureYY" class="spanGreen">00</span><span class="spanBrown">)</span></h1>
+            <h1>&nbsp;</h1>
+            <h1>&nbsp;</h1>
+            <h1><span class="spanBrown">(</span>ns example<span class="spanBrown">)</span></h1>
+            <h1><span class="spanBrown">(</span>defn <span class="spanPurple">Example </span><span class="spanBrown">[] )</span></h1>
+            <h1><span class="spanGreen">(</span><span class="spanBlue2">def </span>Time <span class="spanBrown">(</span>.toString <span class="spanBrown">(</span>java.util.Time.<span class="spanBrown">)))</span></h1>
+            <h1><span class="spanBrown">(</span>println Time<span class="spanBrown">)</span></h1>
+            <h1><span class="spanBrown">(</span><span id="clojurehh" class="spanGreen">00</span>:<span id="clojuremm" class="spanGreen">00</span>:<span id="clojuress" class="spanGreen">00</span><span class="spanBrown">)</span></h1>
+            <h1>&nbsp;</h1>
+        </div>
+        
+        <div class="Perl" id="id-Perl">
+            <h1><span class="spanBlue2">use</span>DateTime; </h1>
+            <h1>#!/usr/local/bin/Perl </h1>
+            <h1>$datetime = localtime(); </h1>
+            <h1>print<span class="spanBlue2">"Current date and time according to the system : $datetime\n"</span>;</h1>
+            <h1>Date:Month-hour:minute:secound-Year</h1>
+            <h1>Current date and time: <span id="PerlDD" class="spanBlue">00</span>:<span id="PerlMM" class="spanBlue">00</span>-<span id="Perlhh" class="spanBlue">00</span>:<span id="Perlmm" class="spanBlue">00</span>:<span id="Perlss" class="spanBlue">00</span>-<span id="PerlYY" class="spanBlue">00</span></h1>
+        </div>
+
+        <div class="Go" id="id-Go">
+            <h1><span class="spanPurple">package </span><span class="spanPurple">main</span></h1>
+            <h1>&nbsp;</h1>
+            <h1><span class="spanPurple">import </span>(</h1>
+            <h1>&nbsp;<span class="spanGreen">"fmt"</span></h1>
+            <h1>&nbsp;<span class="spanGreen">"time"</span></h1>
+            <h1>)</h1>
+            <h1>&nbsp;</h1>
+            <h1>func <span class="spanOrange">main</span>() {</h1>
+            <h1>&nbsp;now <span class="spanGreen">:= </span><span class="spanRed">time</span>.<span class="spanYellow">Now</span>()</h1>    
+            <h1>&nbsp;<span class="spanRed">fmt</span>.<span class="spanYellow">Println</span>(<span class="spanGreen">"Current date and time:"</span>, now)</h1>
+            <h1>OUTPUT: Current date and time: <span id="GoDD" class="spanGreen">00</span>:<span id="GoMM" class="spanGreen">00</span>-<span id="Gohh" class="spanGreen">00</span>:<span id="Gomm" class="spanGreen">00</span>:<span id="Goss" class="spanGreen">00</span>-<span id="GoYY" class="spanGreen">00</span></h1>
+            <h1>}</h1>
+        </div>
+
+        <div class="swift" id="id-swift">
+            <h1>import <span class="spanBlue">Foundation</span></h1>
+            <h1>let currentDate = <span class="spanRed">Date()</span>()</h1>
+            <h1>let formatter = <span class="spanRed">DateFormatter</span>()</h1>
+            <h1>formatter.dateFormat = <span class="spanGreen">"dd:MM-h:mm:ss-yyyy"</span></h1>
+            <h1><span class="spanBlue">let</span> formattedDate = formatter.string(from: currentDate)</h1>
+            <h1>print (<span class="spanGreen">"Formatted date and time: \(formattedDate)"</span>)</h1>
+            <h1>Date:Month-hour:minute:second-Year</h1>
+            <h1>Formatted date and time: <span id="swiftDD" class="spanBlue">00</span>:<span id="swiftMM" class="spanBlue">00</span>-<span id="swifthh" class="spanBlue">00</span>:<span id="swiftmm" class="spanBlue">00</span>:<span id="swiftss" class="spanBlue">00</span>-<span id="swiftYY" class="spanBlue">00</span></h1>
+        </div>
+
+        <div class="R" id="id-R">
+            <h1>current_datetime &lt;- Sys.time()</h1>
+            <h1>formatted_datetime &lt;- format(current_datetime, <span class="spanGreen">"%Y-%m-%d %H:%M:%S"</span>)</h1>
+            <h1>print(formatted_datetime)</h1>
+            <h1><span id="RYY" class="spanGreen">00</span>-<span id="RMM" class="spanGreen">00</span>-<span id="RDD" class="spanGreen">00</span> <span id="Rhh" class="spanGreen">00</span>:<span id="Rmm" class="spanGreen">00</span>:<span id="Rss" class="spanGreen">00</span></h1>
+        </div>
+
+        <div class="php" id="id-php">
+            <h1>&lt;?php</h1>
+            <h1><span class="spanRed">$current_datetime</span> = <span class="spanRed">date</span>(<span class="spanGreen">"Y-m-d H:i:s"</span>);</h1>
+            <h1><span class="spanBlue">echo</span><span class="spanGreen">"Current date and time: $current_datetime"</span>;</h1>
+            <h1>?&gt;</h1>
+            <h1><span class="spanGreen">"Current date and time: </span><span id="phpYY" class="spanGreen">00</span>-<span id="phpMM" class="spanGreen">00</span>-<span id="phpDD" class="spanGreen">00</span> <span id="phphh" class="spanGreen">00</span>:<span id="phpmm" class="spanGreen">00</span>:<span id="phpss" class="spanGreen">00</span></h1>
+        </div>
+
+        <div class="ada" id="id-ada">
+            <h1>with Ada.Text_IO; use Ada.Text_IO;</h1>
+            <h1>with Ada.Calendar; use Ada.Calendar;</h1>
+            <h1>&nbsp;</h1>
+            <h1>procedure Get_Date_Time is</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;Current_Time : Time := Clock;</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;Time_String  : String := Image(Current_Time);</h1>
+            <h1>begin</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;Put_Line("Current date and time: " & Time_String);</h1>
+            <h1>end Get_Date_Time;</h1>
+            <h1>Date:Month-hour:minute:second-Year</h1>
+            <h1><span id="adaDD">00</span>:<span id="adaMM">00</span>-<span id="adahh">00</span>:<span id="adamm">00</span>:<span id="adass">00</span>-<span id="adaYY">00</span></h1>
+        </div>
+
+        <div class="Haskell" id="id-Haskell">
+            <h1><span class="spanBlue">import</span> Data.Time</h1>
+            <h1><span class="spanBlue">main</span> :: IO ()</h1>
+            <h1><span class="spanBlue">main</span> = do</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;currentTime - getCurrentTime</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;putStrLn $ "Current date and time: " ++ show currentTime</h1>
+            <h1><span id="haskellYY" class="spanBlue">00</span></h1>
+            <h1><span id="haskellMM" class="spanBlue">00</span></h1>
+            <h1><span id="haskellDD" class="spanBlue">00</span></h1>
+            <h1><span id="haskellhh" class="spanBlue">00</span></h1>
+            <h1><span id="haskellmm" class="spanBlue">00</span></h1>
+            <h1><span id="haskellss" class="spanBlue">00</span></h1>
+        </div>      
+
+
+
+    </div>
+    <script>
+        function setFontSize() {
+            var element = document.getElementById('id-container');
+            var screenHeight = window.innerHeight;
+            var screenWidth = window.innerWidth;
+            if (screenHeight >= screenWidth) {
+                element.style.fontSize = "1.2vw";
+                element.style.flexDirection = "column";
+            } else {
+                element.style.fontSize = "1.2vh";
+                element.style.flexDirection = "row";
+            }
+        }
+        function getMonthName(month) {
+            const months = [
+                "January", "February", "March", "April", "May", "June",
+                "July", "August", "September", "October", "November", "December"
+            ];
+            return months[month];
+        }
+        function updateTime(hhId, mmId, ssId, DDId, MMId, YYId) {
+            var now = new Date();
+            var hh = now.getHours();
+            var mm = now.getMinutes();
+            var ss = now.getSeconds();
+            var DD = now.getDate();
+            var MM = getMonthName(now.getMonth());
+            var YY = now.getFullYear();
+            hh = (hh < 10 ? '0' : '') + hh;
+            mm = (mm < 10 ? '0' : '') + mm;
+            ss = (ss < 10 ? '0' : '') + ss;
+            DD = (DD < 10 ? '0' : '') + DD;
+            document.getElementById(hhId).textContent = hh;
+            document.getElementById(mmId).textContent = mm;
+            document.getElementById(ssId).textContent = ss;
+            document.getElementById(DDId).textContent = DD;
+            document.getElementById(MMId).textContent = MM;
+            document.getElementById(YYId).textContent = YY;
+        }
+        function toggleDisplay(class1, class2) {
+            const containerDivs = document.querySelectorAll('.container > div');
+            containerDivs.forEach(div => {
+                div.style.display = 'none';
+            });
+            if (class1) {
+                const selectedDiv1 = document.getElementById(class1);
+                console.log(class1 + " found!")
+                if (selectedDiv1) {
+                    selectedDiv1.style.display = 'block';
+                } else {
+                    console.error(`No div found with class ${class1}`);
+                }
+            }
+            if (class2) {
+                const selectedDiv2 = document.getElementById(class2);
+                console.log(class2 + " found!")
+                if (selectedDiv2) {
+                    selectedDiv2.style.display = 'block';
+                } else {
+                    console.error(`No div found with class ${class2}`);
+                }
+            }
+            if (class1=="id-py") {
+                setInterval(function() {updateTime("pyhh", "pymm", "pyss", "pyDD", "pyMM", "pyYY");}, 1000);
+                updateTime("pyhh", "pymm", "pyss", "pyDD", "pyMM", "pyYY");
+            }
+            else if (class1=="id-c"){
+                setInterval(function() {updateTime("chh", "cmm", "css", "cDD", "cMM", "cYy");}, 1000);
+                updateTime("chh", "cmm", "css", "cDD", "cMM", "cYY");
+            }
+            else if (class1=="id-cpp"){
+                setInterval(function() {updateTime("cpphh", "cppmm", "cppss", "cppDD", "cppMM", "cppYy");}, 1000);
+                updateTime("cpphh", "cppmm", "cppss", "cppDD", "cppMM", "cppYY");
+            }
+            else if (class1=="id-cs"){
+                setInterval(function() {updateTime("cshh", "csmm", "csss", "csDD", "csMM", "csYy");}, 1000);
+                updateTime("cshh", "csmm", "csss", "csDD", "csMM", "csYY");
+            }
+            else if (class1=="id-java1"){
+                setInterval(function() {updateTime("javahh", "javamm", "javass", "javaDD", "javaMM", "javaYy");}, 1000);
+                updateTime("javahh", "javamm", "javass", "javaDD", "javaMM", "javaYY");
+            }
+            else if (class1=="id-js"){
+                setInterval(function() {updateTime("jshh", "jsmm", "jsss", "jsDD", "jsMM", "jsYY");}, 1000);
+                updateTime("jshh", "jsmm", "jsss", "jsDD", "jsMM", "jsYY");
+            }
+            else if (class1=="id-rust"){
+            setInterval(function () { updateTime("rusthh", "rustmm", "rustss", "rustDD", "rustMM", "rustYY"); }, 1000);
+            updateTime("rusthh", "rustmm", "rustss", "rustDD", "rustMM", "rustYY");
+            }
+            else if (class1=="id-ruby"){
+            setInterval(function () { updateTime("rubyhh", "rubymm", "rubyss", "rubyDD", "rubyMM", "rubyYY"); }, 1000);
+            updateTime("rubyhh", "rubymm", "rubyss", "rubyDD", "rubyMM", "rubyYY");
+            }
+            else if (class1=="id-sql"){
+            setInterval(function () { updateTime("sqlhh", "sqlmm", "sqlss", "sqlDD", "sqlMM", "sqlYY"); }, 1000);
+            updateTime("sqlhh", "sqlmm", "sqlss", "sqlDD", "sqlMM", "sqlYY");
+            }
+            else if (class1=="id-fortran"){
+            setInterval(function () { updateTime("fortranhh", "fortranmm", "fortranss", "fortranDD", "fortranMM", "fortranYY"); }, 1000);
+            updateTime("fortranhh", "fortranmm", "fortranss", "fortranDD", "fortranMM", "fortranYY");
+            }
+            else if (class1=="id-kotlin"){
+            setInterval(function () { updateTime("kotlinhh", "kotlinmm", "kotlinss", "kotlinDD", "kotlinMM", "kotlinYY"); }, 1000);
+            updateTime("kotlinhh", "kotlinmm", "kotlinss", "kotlinDD", "kotlinMM", "kotlinYY");
+            }
+            else if (class1=="id-clojure"){
+            setInterval(function () { updateTime("clojurehh", "clojuremm", "clojuress", "clojureDD", "clojureMM", "clojureYY"); }, 1000);
+            updateTime("clojurehh", "clojuremm", "clojuress", "clojureDD", "clojureMM", "clojureYY");
+            }
+            else if (class1=="id-Perl"){
+            setInterval(function () { updateTime("Perlhh", "Perlmm", "Perlss", "PerlDD", "PerlMM", "PerlYY"); }, 1000);
+            updateTime("Perlhh", "Perlmm", "Perlss", "PerlDD", "PerlMM", "PerlYY");
+            }
+            else if (class1=="id-Go"){
+            setInterval(function () { updateTime("Gohh", "Gomm", "Goss", "GoDD", "GoMM", "GoYY"); }, 1000);
+            updateTime("Gohh", "Gomm", "Goss", "GoDD", "GoMM", "GoYY");
+            }
+            else if (class1=="id-swift"){
+            setInterval(function () { updateTime("swifthh", "swiftmm", "swiftss", "swiftDD", "swiftMM", "swiftYY"); }, 1000);
+            updateTime("swifthh", "swiftmm", "swiftss", "swiftDD", "swiftMM", "swiftYY");
+             }
+    
+            else if (class1=="id-R"){
+            setInterval(function () { updateTime("Rhh", "Rmm", "Rss", "RDD", "RMM", "RYY"); }, 1000);
+            updateTime("Rhh", "Rmm", "Rss", "RDD", "RMM", "RYY");
+             }
+
+            else if (class1=="id-php"){
+            setInterval(function () { updateTime("phphh", "phpmm", "phpss", "phpDD", "phpMM", "phpYY"); }, 1000);
+            updateTime("phphh", "phpmm", "phpss", "phpDD", "phpMM", "phpYY");
+            }
+
+            else if (class1=="id-ada"){
+            setInterval(function () { updateTime("adahh", "adamm", "adass", "adaDD", "adaMM", "adaYY"); }, 1000);
+            updateTime("adahh", "adamm", "adass", "adaDD", "adaMM", "adaYY");
+            }
+
+            else if (class1=="id-Haskell"){
+            setInterval(function () { updateTime("haskellhh", "haskellmm", "haskellss", "haskellDD", "haskellMM", "haskellYY"); }, 1000);
+            updateTime("haskellhh", "haskellmm", "haskellss", "haskellDD", "haskellMM", "haskellYY");
+            }
+         }
+        window.addEventListener('load', setFontSize);
+        window.addEventListener('resize', setFontSize);
+        window.wallpaperPropertyListener = {
+            applyUserProperties: function(properties) {
+                if (properties.selectClockStyle) {
+                    if (properties.selectClockStyle.value) {
+                        switch (properties.selectClockStyle.value) {
+                            case 1:
+                                toggleDisplay("id-py");
+                                break;
+                            case 2:
+                                toggleDisplay("id-c");
+                                break;
+                            case 3:
+                                toggleDisplay("id-cpp");
+                                break;
+                            case 4:
+                                toggleDisplay("id-cs");
+                                break;
+                            case 5:
+                                toggleDisplay("id-java1","id-java2");
+                                break;
+                            case 6:
+                                toggleDisplay("id-js");
+                                break;
+                            case 7:
+                                toggleDisplay("id-rust");
+                                break;
+                            case 8:
+                                toggleDisplay("id-ruby");
+                                break;
+                            case 9:
+                                toggleDisplay("id-sql");
+                                break; 
+                            case 10:
+                                toggleDisplay("id-fortran");
+                                break;
+                            case 11:
+                                toggleDisplay("id-kotlin");
+                                break;
+                            case 12:
+                                toggleDisplay("id-clojure");
+                                break;  
+                            case 13:
+                                toggleDisplay("id-Perl");
+                                break;  
+                                case 14:
+                                toggleDisplay("id-Go");
+                                break;  
+                                case 15:
+                                toggleDisplay("id-swift");
+                                break;  
+                                case 16:
+                                toggleDisplay("id-R");
+                                break;  
+                                case 17:
+                                toggleDisplay("id-php");
+                                break;  
+                                case 18:
+                                toggleDisplay("id-ada");
+                                break;  
+                                case 19:
+                                toggleDisplay("id-Haskell");
+                                break;  
+                        
+                        
+                        
+                            }
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>
